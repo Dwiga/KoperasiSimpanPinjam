@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a2e5921b-b1c3-4d9e-9511-13a99d993c0a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM pinjaman;]]>
+	</queryString>
+	<field name="id_pinjaman" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kategori_pinjaman" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_anggota" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="besar_pinjaman" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_pengajuan_pinjaman" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_acc_peminjaman" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_pinjaman" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_pelunasan" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="131" y="16" width="263" height="47" uuid="75e582a0-0842-47af-a0b8-a6733c5352e2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PINJAMAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="116" height="20" uuid="84c1edc8-edd0-4b27-800d-e86f108d79aa"/>
+				<text><![CDATA[Kategori Pinjaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="15" width="100" height="20" uuid="82b40824-e028-4a17-84b5-40bcb58d6aa2"/>
+				<text><![CDATA[ID Anggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="15" width="100" height="20" uuid="77427785-c200-464d-b8a8-78e2746646e7"/>
+				<text><![CDATA[Besar Pinjaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="15" width="100" height="20" uuid="15e65cdb-76bf-43d3-8f3f-fa3d8d618317"/>
+				<text><![CDATA[TGL Pelunasan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="15" width="100" height="20" uuid="635f9ea1-2b70-4495-b66a-3bf81c197a03"/>
+				<text><![CDATA[KET]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="116" height="20" uuid="05f926cc-c86b-4664-9725-8ecc80c02534"/>
+				<textFieldExpression><![CDATA[$F{kategori_pinjaman}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="0" width="100" height="20" uuid="63859c9a-7e34-43a6-9239-809e6ab1d61d"/>
+				<textFieldExpression><![CDATA[$F{id_anggota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="0" width="100" height="20" uuid="93ad5f56-416b-4b13-8f9a-9efb70700901"/>
+				<textFieldExpression><![CDATA[$F{besar_pinjaman}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="0" width="100" height="20" uuid="2fb555e7-6834-49db-8161-5d2c66763a18"/>
+				<textFieldExpression><![CDATA[$F{tgl_pelunasan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="0" width="100" height="20" uuid="1a845d38-e9fa-408a-8d61-dc109a8ea00d"/>
+				<textFieldExpression><![CDATA[$F{ket}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
